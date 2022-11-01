@@ -6,6 +6,7 @@ const async = require('async');
 mongoose.connect(config.appSettings.db, { useNewUrlParser: true, useUnifiedTopology: true }, function (err) {
     if (err) {
         console.error(chalk.red('Could not connect to MongoDB!'));
+        console.log('Error');
         console.log(chalk.red(err));
         mongoose.connection.close();
         process.exit(-1);
